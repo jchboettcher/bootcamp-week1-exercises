@@ -11,8 +11,15 @@ const verb1 = ______
 Change thses values to generate a different story
 */
 
+noun1 = "turtle"
+name1 = "Sam"
+noun2_plural = "socks"
+verb1_past_tense = "jumped"
+verb2_past_tense = "laughed"
+adjective1 = "fun"
+
 const story = `
-**replace this with your story using a template string**
+A ${noun1} named ${name1} went to the store to buy some ${noun2_plural}. When he was there, he ${verb1_past_tense} and ${verb2_past_tense}. It was ${adjective1}.
 `
 
 console.log(story)

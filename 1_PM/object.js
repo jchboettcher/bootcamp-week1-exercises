@@ -10,6 +10,14 @@ const assert = require('assert')
  */
 
 const hasFalsyValue = obj => {
+  if (typeof obj == "object") {
+    for (const key in obj) {
+      if (!(obj[key]) || hasFalsyValue(obj[key])) {
+        return true
+      }
+    }
+  }
+  return false
 };
 
 const falsyObj = {
@@ -32,6 +40,5 @@ const truthyObj = {
     anotherTruthy: ";)"
   }
 };
-
 assert(hasFalsyValue(falsyObj) === true);
 assert(hasFalsyValue(truthyObj) === false);
