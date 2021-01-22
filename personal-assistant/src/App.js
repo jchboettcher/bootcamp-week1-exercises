@@ -1,8 +1,18 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import TodoApp from './TodoListComponents/TodoApp'
+import WeatherApp from './WelcomePageComponents/WeatherApp'
 
 const App = () => (
   <div>
-    Beep boop hi there, I&apos;m your personal assistant hehe
+    <Switch>
+      <Route path="/todo">
+        <TodoApp />
+      </Route>
+      <Route path="/">
+        <WeatherApp />
+      </Route>
+    </Switch>
   </div>
 )
 
